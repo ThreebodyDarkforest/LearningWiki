@@ -1,0 +1,118 @@
+# Headline
+
+> An awesome project.
+
+$$
+123
+$$
+
+# 高斯公式和斯托克斯公式
+
+## 写在前面
+
+* **「高斯公式」**将第二型曲面积分转化成三重积分，与「格林公式」类似
+* 高斯公式可以很好地简化一些第二型曲面积分的计算
+* **「斯托克斯公式」**将第二型曲线积分转换成第二型曲面积分，简记为行列式，可以很好地简化一些线积分的计算
+
+## 高斯公式
+
+$$
+\iint\limits_{S^+}Pdydz+Qdzdx+Rdxdy=\iiint\limits_{\Omega}\left(\dfrac{\partial P}{\partial x}+\dfrac{\partial Q}{\partial y}+\dfrac{\partial R}{\partial z}\right)dxdydz
+$$
+
+定义**散度**：
+$$
+div \vec F=\dfrac{\partial P}{\partial x}+\dfrac{\partial Q}{\partial y}+\dfrac{\partial R}{\partial z}
+$$
+
+* 使用该公式须满足条件（‼️**影响符号和使用**）：
+  （1）$S$ 是**封闭曲面**
+  （2）$S^+$ 为**封闭曲面的外侧**（否则要加负号）
+  （3）$P,Q,R$ 在区域边界上有连续的一阶偏导数
+
+### 例题
+
+* 高斯公式的方法可以在大多数第二型曲面积分（上一节）的问题中得到应用
+
+#### 一
+
+![PNG506884d5845785f5.png](http://image.tjzfile.xyz/images/2022/04/11/PNG506884d5845785f5.png)
+
+## 斯托克斯公式
+
+$$
+\begin{aligned}
+\oint_{L^+}Pdx+Qdy+Rdz&\\
+=\iint\limits_{S^+}\left(\dfrac{\partial R}{\partial y}-\dfrac{\partial Q}{\partial z}\right)dydz&+\left(\dfrac{\partial P}{\partial z}-\dfrac{\partial R}{\partial x}\right)dzdx+\left(\dfrac{\partial Q}{\partial x}-\dfrac{\partial P}{\partial y}\right)dxdy
+\end{aligned}
+$$
+
+‼️**计算时**，简记为行列式（1）
+$$
+I=\iint\limits_{S^+}
+\left|
+\begin{aligned}
+&dydz~~~~~dzdx~~~~~dxdy~\\
+&\dfrac{\partial}{\partial x}~~~~~~~~\dfrac{\partial}{\partial y}~~~~~~~~\dfrac{\partial}{\partial z}\\
+~&P~~~~~~~~~~~~Q~~~~~~~~~~~~R
+\end{aligned}
+\right|
+$$
+或记为（2）
+$$
+I=\iint\limits_{S^+}
+\left|
+\begin{aligned}
+&\cos\alpha~~~~~\cos\beta~~~~~\cos\gamma~\\
+&\dfrac{\partial}{\partial x}~~~~~~~~\dfrac{\partial}{\partial y}~~~~~~~~\dfrac{\partial}{\partial z}\\
+~&P~~~~~~~~~~~~Q~~~~~~~~~~~~R
+\end{aligned}
+\right|dS
+$$
+其中定义向量函数的**旋度**
+$$
+rot\vec F=\iint\limits_{S^+}
+\left|
+\begin{aligned}
+&~~\vec i~~~~~~~\vec j~~~~~~~\vec k~~\\
+&\dfrac{\partial}{\partial x}~~~\dfrac{\partial}{\partial y}~~~\dfrac{\partial}{\partial z}\\
+&~~P~~~~~~Q~~~~~R
+\end{aligned}
+\right|
+$$
+则
+$$
+I=\iint\limits_{S^+}rot\vec F\cdot d\vec S
+$$
+
+* 使用该公式须满足条件：
+  （1）$S^+$ 与 $L^+$ 满足**右手螺旋定则**
+  （2）$L^+$ 需为**逆时针向**，否则需要加负号
+  （3）若要将线积分转换成对于**不同的面的面积分**，区别在于进行
+
+$$
+\oint_{L^+}P(x,y,z)dx=\oint_{C^+}P(x,y,f(x,y))dx
+$$
+
+的替换时$z=f(x,y)$ 不一样（对于 $x,y$ 的函数同理）（故做题时一定要‼️**注意要转换成的曲面是哪个曲面，表达式是什么，法向量怎么指，一阶偏导数是多少**）
+注：
+（1）对于（1）（2）式的使用，若**要求曲面积分的面是一个「平面」**，且法向量的三个夹角的余弦比较好求，就用（2），一般用（1）泛用型更强
+
+### 例题
+
+* 写题时添加修正以降低错误率：
+  （1）步骤中写入完整的斯托克斯公式
+  （2）步骤中写入完整的第二型曲面积分计算公式
+
+#### 一
+
+![PNG.png](http://image.tjzfile.xyz/images/2022/04/14/PNG.png)
+![PNG61cb9a8db407cd74.png](http://image.tjzfile.xyz/images/2022/04/14/PNG61cb9a8db407cd74.png)
+![PNGaf12e0232886101b.png](http://image.tjzfile.xyz/images/2022/04/14/PNGaf12e0232886101b.png)
+
+#### 二
+
+![PNG1acd1f52da06f44f.png](http://image.tjzfile.xyz/images/2022/04/14/PNG1acd1f52da06f44f.png)
+![PNG852a59bcbd3aaf00.png](http://image.tjzfile.xyz/images/2022/04/14/PNG852a59bcbd3aaf00.png)
+![PNG3cf827d6ebee5d9f.png](http://image.tjzfile.xyz/images/2022/04/14/PNG3cf827d6ebee5d9f.png)
+![PNG79f58bf725d8042e.png](http://image.tjzfile.xyz/images/2022/04/14/PNG79f58bf725d8042e.png)
