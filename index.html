@@ -6,23 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="vue.css">
 </head>
 <body>
-  <nav>
-    <a href="www.cnblogs.com/DarkValkyrie/">靑亻鳥</a>
-  </nav>
   <div id="app"></div> 
 
   <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  var num = 0;
-  mermaid.initialize({ startOnLoad: false });
 
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="docsify.min.js"></script>
   <script>
     window.$docsify = {
       name: '新工科Wiki',
       repo: '',
+      loadSidebar: true,
+      loadNavbar: true,
+      coverpage: true,
+      mergeNavbar: true,
       search: {
         paths: 'auto',
         placeholder: '搜索',
@@ -45,9 +44,9 @@
             }
             return this.origin.code.apply(this, arguments);
           },
-          del: function(text) {
-            return '~';
-          }
+          //del: function(text) {
+          //  return '~';
+          //}
         }
       }
     }
