@@ -1,5 +1,5 @@
 * 简介
-* [回到首页](README.md)
+* [回到首页](/)
 * 关于作者
 
   * [博客园](https://www.cnblogs.com/DarkValkyrie/)
