@@ -1,10 +1,15 @@
 from email.utils import encode_rfc2231
 from fileinput import filename
+import imp
 import os
+import platform
 import shutil
 
 path = os.getcwd()
-objname = path[path.rfind('\\') + 1:]
+if(platform.system() == 'Windows'):
+    objname = path[path.rfind('\\') + 1:]
+else:
+    objname = path[path.rfind('/') + 1:]
 myfile =  open(f'{path}/_sidebar.md', 'w')
 dict = { "一" : 1, "二" : 2, "三" : 3, "四" : 4, "五" : 5, "六" : 6, "七" : 7, "八" : 8, "九" : 9, "十" : 10,
          "十一" : 11, "十二" : 12, "十三" : 13, "十四" : 14, "十五" : 15, "十六" : 16}
