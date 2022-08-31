@@ -6,6 +6,8 @@ import shutil
 path = os.getcwd()
 objname = path[path.rfind('\\') + 1:]
 myfile =  open(f'{path}/_sidebar.md', 'w')
+dict = { "一" : 1, "二" : 2, "三" : 3, "四" : 4, "五" : 5, "六" : 6, "七" : 7, "八" : 8, "九" : 9, "十" : 10,
+         "十一" : 11, "十二" : 12, "十三" : 13, "十四" : 14, "十五" : 15, "十六" : 16}
 
 with os.scandir(path) as entries:
     flag = 0
