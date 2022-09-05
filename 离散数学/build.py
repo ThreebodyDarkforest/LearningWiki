@@ -1,9 +1,9 @@
 from email.utils import encode_rfc2231
 from fileinput import filename
-import imp
+import string
+import numpy as np
 import os
 import platform
-import shutil
 
 path = os.getcwd()
 if(platform.system() == 'Windows'):
@@ -25,14 +25,27 @@ with os.scandir(path) as entries:
             myfile.write(f'  * [{_file_name[:-3]}]({objname}/{_file_name})\n')
             print(f'  * [{_file_name[:-3]}]({objname}/{_file_name})\n')
 
+filelist = [[0] * 101 for x in range(20)]
+chaplist = [0] * 20
 for dirpath, dirnames, files in os.walk('.', topdown=False):
     if not (dirpath.endswith('章')):
         continue
-    print(f'* {dirpath[2:]}')
-    myfile.write(f'* {dirpath[2:]}\n')
+    #print(f'* {dirpath[2:]}')
+    #myfile.write(f'* {dirpath[2:]}\n')
+    chaplist[dict[dirpath[-2:-1]]] = dirpath[-2:-1]
+    index = 0
     for file_name in files:
         if(file_name.endswith('.md')):
-            print(f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})')
-            myfile.write(f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})\n')
+            #print(f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})')
+            #myfile.write(f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})\n')
+            filelist[dict[dirpath[-2:-1]]][index] = f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})\n'
+            index += 1
+
+Chaplist = [x for x in chaplist if x != 0]
+for x in Chaplist:
+    myfile.write(f'* 第{x}章\n')
+    for name in filelist[dict[x]]:
+        if name != 0:
+            myfile.write(name)
 
 myfile.close()
