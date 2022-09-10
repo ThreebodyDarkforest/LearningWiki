@@ -6,11 +6,3 @@
 
 [Github](https://github.com/ThreebodyDarkforest/LearningWiki) [让我看看](/README.md)
 
-
-
-
-
-
-
-![](http://image.tjzfile.xyz/images/2022/06/14/IMG_0005.jpg)
-
