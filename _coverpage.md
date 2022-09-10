@@ -1,4 +1,4 @@
-# <font color = litBlue>新工科Wiki</font>
+## 新工科Wiki
 
 > 这是一个来自中山大学的神秘本科生做的学习笔记
 
