@@ -14,5 +14,3 @@
 
 ![](http://image.tjzfile.xyz/images/2022/06/14/IMG_0005.jpg)
 
-![color](#f0f0f0)
-
