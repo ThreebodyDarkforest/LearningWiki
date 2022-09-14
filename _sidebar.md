@@ -6,3 +6,4 @@
 * [离散数学](离散数学/README.md)
 * [复变函数](复变函数/README.md)
 * [机器学习](机器学习/README.md)
+* [C++程序设计](C++程序设计/README.md)
