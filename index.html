@@ -76,6 +76,9 @@
                function(x){ return x.replace('_','[subscript]')}
             )
           })
+          hook.beforeEach(function (content) {
+            return content.replace(/\\/g, "\\\\")
+          })
           hook.afterEach(function(html, next) {
             html = html.replace(/\$\$([\s\S]*?)\$\$/g,
                function(x){ return x.replace(/(\[subscript\])/g,'_') }
