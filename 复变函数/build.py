@@ -31,7 +31,7 @@ for dirpath, dirnames, files in os.walk('.', topdown=False):
     isChap = 0
 
     if dirpath.endswith('章'):
-        ifChap = 1
+        isChap = 1
         chaplist[dict[dirpath[-2:-1]]] = dirpath[-2:-1]
     elif dirpath == '.':
         continue
@@ -45,7 +45,7 @@ for dirpath, dirnames, files in os.walk('.', topdown=False):
     index = 0
     for file_name in files:
         if(file_name.endswith('.md')):
-            #print(f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})')
+            print(f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})')
             if not isChap: myfile.write(f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})\n')
             filelist[dict[dirpath[-2:-1]]][index] = f'  * [{file_name[:-3]}]({objname}/{dirpath[2:]}/{file_name})\n'
             index += 1
