@@ -120,7 +120,7 @@ int kmp(string ms)
 ![Screenshot-from-2022-09-21-20-12-00.png](http://image.tjzfile.xyz/images/2022/09/21/Screenshot-from-2022-09-21-20-12-00.png)
 ![Screenshot-from-2022-09-21-20-12-06.png](http://image.tjzfile.xyz/images/2022/09/21/Screenshot-from-2022-09-21-20-12-06.png)
 ![Screenshot-from-2022-09-21-20-12-11.png](http://image.tjzfile.xyz/images/2022/09/21/Screenshot-from-2022-09-21-20-12-11.png)
-![Screenshot-from-2022-09-21-20-12-18.png](http://image.tjzfile.xyz/images/2022/09/21/Screenshot-from-2022-09-21-20-12-18.png)
+![Screenshot-from-2022-09-21-20-24-30.png](http://image.tjzfile.xyz/images/2022/09/21/Screenshot-from-2022-09-21-20-24-30.png)
 
 $next$ 数组的自递归和自相似的性质一览无余。
 
