@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
   <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
 
   <style>
     .demo{
@@ -31,8 +32,7 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
 
-  <script src="//unpkg.com/docsify-slides/dist/docsify-slides.min.js"></script>
-  <!-- slide:break -->
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
 
   <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
@@ -63,6 +63,11 @@
       mergeNavbar: true,
       executeScript: true,
       subMaxLevel: 3,
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4, h5, h6',
+        title: 'Table of Contents',
+      },
       plugins: [
         EditOnGithubPlugin.create(
           'https://github.com/ThreebodyDarkforest/LearningWiki/tree/main/', 
