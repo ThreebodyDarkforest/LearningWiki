@@ -125,3 +125,47 @@ int kmp(string ms)
 $next$ 数组的自递归和自相似的性质一览无余。
 
 直接分析代码就能看出复杂度，显然 KMP 和 $next$ 数组的计算里面 $i$ 都没有半点回溯的意思，所以最坏复杂度也就是 $O(n + m)$。
+
+## 模板
+
+板子在这 [P3375](https://www.luogu.com.cn/problem/P3375)，把我 n 年前的题解拿出来贴着。
+
+```cpp
+#include<cstdio>
+#include<iostream>
+#include<cmath>
+#include<cstring>
+#include<ctime>
+#include<cstdlib>
+#include<algorithm>
+#include<queue>
+#include<set>
+#include<map>
+#define N 1000010
+using namespace std;
+int next[N];
+char a[N],b[N];
+int main()
+{
+	cin>>a+1,cin>>b+1;
+	int la=strlen(a+1),lb=strlen(b+1);
+	int j=0;
+	for(int i=2;i<=lb;i++){
+		while(j&&b[j+1]!=b[i]) j=next[j];
+		if(b[j+1]==b[i]) j++;
+		next[i]=j;
+	}
+	j=0;
+	for(int i=1;i<=la;i++){
+		while(j&&b[j+1]!=a[i]) j=next[j];
+		if(b[j+1]==a[i]) j++;
+		if(j==lb){
+			printf("%d\n",i-lb+1);
+			j=next[j];
+		}
+	}
+	for(int i=1;i<=lb;i++) printf("%d ",next[i]);
+	return 0;
+}
+
+```
