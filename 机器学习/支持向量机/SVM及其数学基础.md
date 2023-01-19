@@ -71,7 +71,7 @@ $$
 \end{aligned}
 \right.
 $$
-> 其中，$\alpha_i \ge 0$ 称为「对偶可行性」，$\alpha_ig_i(\pmb x) \le 0$ 称为「互补松弛性」。
+> 其中，$\alpha_i \ge 0$ 称为「对偶可行性」，$\alpha_ig_i(\pmb x) = 0$ 称为「互补松弛性」。
 > 
 > 关于 KKT 条件的来源，可以参考[这篇更易懂的文章](https://zhuanlan.zhihu.com/p/154517678)，以及[这篇更严谨的文章](https://zhuanlan.zhihu.com/p/38163970)，建议结合起来着重看懂其中关于「不等式约束」的部分即可（最重要的部分即 $\alpha_i \ge 0$ 的原因）。
 > 
