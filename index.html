@@ -90,7 +90,7 @@
         function (hook) {
           hook.beforeEach(function (content) {
             return content.replace(/\$\$([\s\S]*?)\$\$/g,
-               function(x){ return x.replace(/[_]/g,'[subscript]')}
+               function(x){ return x.replace(/[_]/g,'[subscript]').replace('*', '[star]')}
             )
           })
           hook.beforeEach(function (content) {
@@ -103,7 +103,7 @@
           })
           hook.afterEach(function(html, next) {
             html = html.replace(/\$\$([\s\S]*?)\$\$/g,
-               function(x){ return x.replace(/(\[subscript\])/g,'_') }
+               function(x){ return x.replace(/(\[subscript\])/g,'_').replace(/\[star\]/g, '*')}
             )
             html = html.replace(/\$([\s\S]*?)\$/g,
                function(x){ return x.replace(/(\[subscript\])/g,'_')}
