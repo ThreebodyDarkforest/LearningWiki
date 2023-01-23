@@ -122,7 +122,7 @@ $$
 \right.
 $$
 
-这是因为当 $\pmb x\not\in K$ 时，有 $g_i(\pmb x) > 0$，那么取任意大的 $\alpha_i$ 就会使得 $\sum_{i = 1}^k \alpha_i g_i(\pmb x) \rightarrow \infty$，此外，还有 $h_i(\pmb x) \neq 0$，则可以任取 $\beta_i$ 使得 $sum_{i = 1}^l\beta_ih_i(\pmb x) \rightarrow \infty$，换言之只要约束条件不被满足，一定有 $\underset{\alpha,\beta:\alpha_i\ge 0}{\max} F\rightarrow +\infty$。
+这是因为当 $\pmb x\not\in K$ 时，有 $g_i(\pmb x) > 0$，那么取任意大的 $\alpha_i$ 就会使得 $\sum_{i = 1}^k \alpha_i g_i(\pmb x) \rightarrow \infty$，此外，还有 $h_i(\pmb x) \neq 0$，则可以任取 $\beta_i$ 使得 $\sum_{i = 1}^l\beta_ih_i(\pmb x) \rightarrow \infty$，换言之只要约束条件不被满足，一定有 $\underset{\alpha,\beta:\alpha_i\ge 0}{\max} F\rightarrow +\infty$。
 
 而当 $x\in K$ 时，根据 $h_i(\pmb x) = 0, g_i(\pmb x) \le 0, \alpha_i \ge 0$ 显然可得结论。
 
