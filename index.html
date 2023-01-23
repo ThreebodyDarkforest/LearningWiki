@@ -95,7 +95,7 @@
           })
           hook.beforeEach(function (content) {
             return content.replace(/\$([\s\S]*?)\$/g,
-               function(x){ return x.replace('_','[subscript]')}
+               function(x){ return x.replace('_','[subscript]').replace('*', '[star]')}
             )
           })
           hook.beforeEach(function (content) {
@@ -106,7 +106,7 @@
                function(x){ return x.replace(/(\[subscript\])/g,'_').replace(/\[star\]/g, '*')}
             )
             html = html.replace(/\$([\s\S]*?)\$/g,
-               function(x){ return x.replace(/(\[subscript\])/g,'_')}
+               function(x){ return x.replace(/(\[subscript\])/g,'_').replace(/\[star\]/g, '*')}
             )
             MathJax.Hub.Queue( ["Typeset",MathJax.Hub] ) // calling it twice
             MathJax.Hub.Queue( ["Typeset",MathJax.Hub] ) //fixes MathJax refresh issue
