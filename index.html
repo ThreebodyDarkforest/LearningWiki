@@ -103,7 +103,7 @@
           })
           hook.afterEach(function(html, next) {
             html = html.replace(/\$\$([\s\S]*?)\$\$/g,
-               function(x){ return x.replace(/(\[subscript\])/g,'_')}
+               function(x){ return x}
             )
             html = html.replace(/\$([\s\S]*?)\$/g,
                function(x){ return x.replace(/(\[subscript\])/g,'_')}
