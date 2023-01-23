@@ -90,12 +90,12 @@
         function (hook) {
           hook.beforeEach(function (content) {
             return content.replace(/\$\$([\s\S]*?)\$\$/g,
-               function(x){ return x.replace(/[_]/g,'[subscript]').replace('*', '[star]')}
+               function(x){ return x.replace(/\[star\]/g, '*')}
             )
           })
           hook.beforeEach(function (content) {
             return content.replace(/\$([\s\S]*?)\$/g,
-               function(x){ return x.replace('_','[subscript]').replace('*', '[star]')}
+               function(x){ return x.replace('_','[subscript]')}
             )
           })
           hook.beforeEach(function (content) {
