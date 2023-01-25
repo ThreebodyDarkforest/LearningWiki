@@ -138,7 +138,7 @@ $$
 簇 $G_p$ 的样本与 $G_q$ 中样本之间的最短距离
 
 $$
-D_{pq} = \min\{d_{ij}|\pmb x_i\in G_p. \pmb x_j\in G_q\}
+D_{pq} = d_{min}(G_p, G_q) = \min\{d_{ij}|\pmb x_i\in G_p. \pmb x_j\in G_q\}
 $$
 
 #### 最长距离或完全连接
@@ -146,7 +146,7 @@ $$
 簇 $G_p$ 的样本与 $G_q$ 的样本之间的最长距离
 
 $$
-D_{pq} = \max\{d_{ij}|\pmb x_i\in G_p. \pmb x_j\in G_q\}
+D_{pq} = d_{max}(G_p, G_q) = \max\{d_{ij}|\pmb x_i\in G_p. \pmb x_j\in G_q\}
 $$
 
 #### 中心距离
@@ -154,7 +154,7 @@ $$
 簇 $G_p$ 与 $G_q$ 的中心 $\overline{\pmb x}_p, \overline{\pmb x}_q$ 之间的距离
 
 $$
-D_{pq} = d_{ij}
+D_{pq} = d_{cen}(G_p, G_q) = d_{\overline{\pmb x}_p, \overline{\pmb x}_q}
 $$
 
 #### 平均距离
@@ -162,8 +162,33 @@ $$
 簇 $G_p$ 与 $G_q$ 任意两个样本之间距离的平均值
 
 $$
-D_{pq} = \dfrac{1}{n_qn_p}\sum_{\pmb x_i\in G_p}\sum_{\pmb x_i\in G_q} d_{i,j}
+D_{pq} = \text{avg}(G_p, G_q) = \dfrac{1}{n_qn_p}\sum_{\pmb x_i\in G_p}\sum_{\pmb x_i\in G_q} d_{i,j}
 $$
+
+### 簇内距离
+
+簇内距离有几种，定义如下
+
+#### 平均距离
+
+$$
+\text{avg}(G_p) = \dfrac{1}{|G_p|(|G_p - 1|)}\sum_{1\le i\le j\le |G_p|}d_{ij}
+$$
+
+#### 最远距离
+
+$$
+d_{max}(G_p) = \max_{1\le i\le j\le |G_p|}d_{ij}
+$$
+
+#### 最近距离
+
+$$
+d_{min}(G_p) = \max_{1\le i\le j\le |G_p|}d_{ij}
+$$
+
+> 注：
+> （1）注意区分簇间距离和簇内距离。簇间距离是单一指标但有多种可选方案，比如用簇间最短距离和簇中心距离来度量簇间距离是不同的方案。但是簇内距离的几个指标是分立的指标。
 
 ## 性能度量
 
@@ -206,7 +231,17 @@ $$
 
 ### 内部指标
 
+* DB 指数
 
+$$
+DBI = \dfrac{1}{d}\sum_{i = 1}^d\max_{j\neq i, 1\le j\le d}\left(\dfrac{\text{avg}(G_i) + \text{avg}(G_j)}{d_{cen}(G_i,G_j)}\right)
+$$
+
+* Dunn 指数
+
+$$
+DI = \min_{1\le i\le d}\left\{\max_{j\neq i}\left(\dfrac{d_{min}(G_i, G_j)}{\underset{{1\le l\le k}}{\max}d_{max}(G_l)}\right)\right\}
+$$
 
 ## 算法原理
 
