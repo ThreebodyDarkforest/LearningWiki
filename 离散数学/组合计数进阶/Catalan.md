@@ -34,7 +34,7 @@ $$
 
 考虑路径计数问题，从左下角 $(0, 0)$ 出发，走到右上角 $(n, n)$，每次只能往右或往上走，而且往右走的次数必须大于等于往上走的次数。那么问题如下
 
-![Screenshot-from-2022-12-07-21-45-30.png](http://image.tjzfile.xyz/images/2022/12/07/Screenshot-from-2022-12-07-21-45-3意味着0.png)
+![Screenshot-from-2022-12-07-21-45-30.png](http://image.tjzfile.xyz/images/2022/12/07/Screenshot-from-2022-12-07-21-45-30.png)
 
 > 注：红线显然意味着 $x \ge y$。
 

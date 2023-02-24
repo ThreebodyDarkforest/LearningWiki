@@ -60,7 +60,7 @@ $$
 \begin{matrix}
     n\\0
 \end{matrix}
-\right] = 1, 
+\right] = 0，
 \left[
 \begin{matrix}
     0\\0
