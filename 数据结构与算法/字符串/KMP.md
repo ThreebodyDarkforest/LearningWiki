@@ -39,9 +39,23 @@ step 3:...
 
 KMP也发现了这一点，它的的核心思想就是尽可能在每次失配的时候把这个模式串挪远一点，这个操作就依赖于模式串的子串的自相似性，更具体地说是**模式串的前缀子串的相同前后缀有多长**（注意，这里就是个递归定义了）。
 
+举个例子，这是一个模式串
+
+```cpp
+abcdabefgh
+```
+
+这是该模式串的一个前缀子串
+
+```cpp
+abcdab
+```
+
+它们显然具有相同的前后缀 `ab`，长度为 $2$。
+
 然后KMP也没什么高深的，它就是暴力的改进，说白了也是搁主串上挪模式串这么一个事儿。
 
-我们可以假想一下模式串的某个真前缀的前后缀是一样的，比如这个模式串 `abcdabefg`，它有一个真前缀 `abcdab` 的前后缀 `ab` 是一样的，而且是最长的。如果主串长这样 `abcdabcda...`，显然会在 `e != c` 这里失配。
+我们可以假想一下模式串的某个真前缀子串的前后缀是一样的，比如这个模式串 `abcdabefg`，它有一个真前缀 `abcdab` 的前后缀 `ab` 是一样的，而且是最长的。如果主串长这样 `abcdabcda...`，显然会在 `e != c` 这里失配。
 
 ```cpp
 abcdab(c)da...
@@ -89,6 +103,8 @@ int kmp(string s, string ms)
         if(j == 0 || s[i] == ms[j]) { i++, j++; }
         else j = next[j];
     }
+    if(j > len_ms) return i - len_ms;
+    else return 0;
 }
 ```
 
@@ -100,12 +116,12 @@ int kmp(string s, string ms)
 
 ```cpp
 // 记得下标都从 1 开始
-int kmp(string ms)
+void kmp_next(string ms)
 {
     int len_ms = strlen(ms);
     int i = 1, j = 0;
     while(i <= len_ms) {
-        if(j == 0 || s[i] == ms[j]) { i++, j++; next[i] = j; }
+        if(j == 0 || ms[i] == ms[j]) { i++, j++; next[i] = j; }
         else j = next[j];
     }
 }
