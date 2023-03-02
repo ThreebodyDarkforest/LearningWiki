@@ -26,7 +26,7 @@ SMO 算法基于一条基本定理：
 
 也就是说，只要我们通过某种手段不断调整分类超平面，使得当前解逐渐完全满足 KKT 条件即可。SMO 算法就是这样一种迭代算法，它在每轮迭代中选取两个特定的 $\alpha_1, \alpha_2$ 作为变量，并**固定其它** $\pmb\alpha$，选取标准如下
 
-* $\alpha_1$ 为所有样本点中违反 KKT 条件的那个点对应的拉格朗日乘子。
+* $\alpha_1$ 为所有样本点中违反 KKT 条件最严重的那个点对应的拉格朗日乘子。
 * $\alpha_2$ 为在 $\alpha_1$ 已确定的情况下自身能够发生最大变化的拉格朗日乘子。
 
 然后，用这两个变量构造一个子问题
@@ -35,7 +35,7 @@ $$
 \begin{aligned}
     \min_{\alpha_1, \alpha_2} W(\alpha_1,\alpha_2) = &\dfrac{1}{2}K_{11}\alpha_1^2 + \dfrac{1}{2}K_{22}\alpha_2^2 + y_1y_2K_{12}\alpha_1\alpha_2 -\\ 
     &(\alpha_1 + \alpha_2) + y_1\alpha_1\sum_{i = 3}^ny_i\alpha_iK_{i1} + y_2\alpha_2\sum_{i = 3}^ny_i\alpha_iK_{i2}\\
-    st.&~\alpha_1y_1 + \alpha_2y_2 = -\sum_{i = 3}^n \alpha_iy_2 = \varsigma\\
+    st.&~\alpha_1y_1 + \alpha_2y_2 = -\sum_{i = 3}^n \alpha_iy_i = \varsigma\\
     &0\le \alpha_i \le C,~ i = 1,2
 \end{aligned}
 $$
@@ -49,9 +49,9 @@ $$
 该问题实质上是单变量最优化问题，即可直接使用解析法求解。此外，由于该问题只含两个变量，故可在二维平面上进行讨论。
 
 * 由 $0\le \alpha_i \le C, i = 1, 2$ 可知该问题的可行域在一个 $[0, C]\times [0, C]$ 的方框内。
-* 由 $\alpha_1y_2 + \alpha_2y_2 = \varsigma$ 可知该问题的可行域进一步缩小到 $[0, C]\times [0, C]$ 中的一条直线段。
+* 由 $\alpha_1y_1 + \alpha_2y_2 = \varsigma$ 可知该问题的可行域进一步缩小到 $[0, C]\times [0, C]$ 中的一条直线段。
 
-进一步地，我们希望求出 $W(\alpha_1, \alpha_2)$ 在此二约束下的最优解，那么不妨先求出无约束情况下的最优解，再通过考察 $W(\alpha_1, \alpha_2)$ 的和约束本身性质来确定最优解。
+进一步地，我们希望求出 $W(\alpha_1, \alpha_2)$ 在此二约束下的最优解，那么不妨先求出无约束情况下的最优解，再通过考察 $W(\alpha_1, \alpha_2)$ 的和约束本身的性质来确定最优解。
 
 显然，**无约束最优解**是易求的，首先作变量代换，求 $\alpha_2^{new,unc}$
 
@@ -62,7 +62,7 @@ W(\alpha_2) = &\dfrac{1}{2}K_{11}(\varsigma - \alpha_2y_2)^2 + \dfrac{1}{2}K_{22
 \end{aligned}
 $$
 
-令 $\dfrac{dW}{d\alpha_2}$ = 0，并由初始可行解 $\alpha_1^{old}, \alpha_2^{old}$ 计算常数 $\varsigma = \alpha_1^{old}y_1 + \alpha_2^{old}y_2$，可得
+令 $\dfrac{dW}{d\alpha_2} = 0$，并由初始可行解 $\alpha_1^{old}, \alpha_2^{old}$ 计算常数 $\varsigma = \alpha_1^{old}y_1 + \alpha_2^{old}y_2$，可得
 
 $$
 \alpha_2^{new, unc} = \alpha_2^{old} + \dfrac{y_2(E_1 - E_2)}{\eta}
@@ -71,7 +71,7 @@ $$
 其中
 
 $$
-g(\pmb x) = \sum_{i = 1}^n\alpha_iy_iK(\pmb x_i, \pmb x) + b
+g(\pmb x) = \sum_{i = 1}^n\alpha_i^{old}y_iK(\pmb x_i, \pmb x) + b
 $$
 
 $$
@@ -85,7 +85,7 @@ $$
 那么
 
 $$
-\alpha_1^{new,unc} =  \alpha_1^{old} +  y_1y_2(\alpha_1^{old} - \alpha_1^{new,unc})
+\alpha_1^{new,unc} =  \alpha_1^{old} +  y_1y_2(\alpha_2^{old} - \alpha_2^{new,unc})
 $$
 
 > 注：
@@ -119,24 +119,24 @@ $$
 求出 $\alpha_2^{new}$ 后，再用跟上面同样的方法即可求出 $\alpha_1^{new}$
 
 $$
-\alpha_1^{new} =  \alpha_1^{old} +  y_1y_2(\alpha_1^{old} - \alpha_1^{new})
+\alpha_1^{new} =  \alpha_1^{old} +  y_1y_2(\alpha_2^{old} - \alpha_2^{new})
 $$
 
-要更新分类超平面，除了 $\pmb\alpha$ 还需要更新阈值 $b$，同时重新计算所有 $E_i$（其中含有 $b$）
+要更新分类超平面，除了 $\pmb\alpha$ 还需要更新阈值 $b$，同时重新计算所有 $E_i$（其中含有 $b$ 和 $\pmb\alpha$）
 
 $$
-b_1^{new} = -E_1 - y_1K_{11}(\alpha_1^{new} - \alpha_1^{old}) - y_2K_{21}(\alpha_2^{new} - \alpha_2^{old}) + b^{old}
+b_1^{new} = -E_1^{old} - y_1K_{11}(\alpha_1^{new} - \alpha_1^{old}) - y_2K_{21}(\alpha_2^{new} - \alpha_2^{old}) + b^{old}
 $$
 
 $$
-b_2^{new} = -E_2 - y_1K_{12}(\alpha_1^{new} - \alpha_1^{old}) - y_2K_{22}(\alpha_2^{new} - \alpha_2^{old}) + b^{old}
+b_2^{new} = -E_2^{old} - y_1K_{12}(\alpha_1^{new} - \alpha_1^{old}) - y_2K_{22}(\alpha_2^{new} - \alpha_2^{old}) + b^{old}
 $$
 
 * 若 $0 < \alpha_i < C, i = 1,2$，那么 $b^{new} = b_1^{new} = b_2^{new}$。
 * 若 $\alpha_1^{new}, \alpha_2^{new}$ 是 $0$ 或 $C$，那么 $\min(b_1^{new}, b_2^{new})\le b^{new} \le \max(b_1^{new}, b_2^{new})$。
 
 $$
-E_i^{new} = \sum_{j\in S}y_j\alpha_jK(\pmb x_i, \pmb x_j) + b^{new} - y_i
+E_i^{new} = \sum_{j\in S}y_j\alpha_j^{new}K(\pmb x_i, \pmb x_j) + b^{new} - y_i
 $$
 
 其中 $S$ 是当前所有支持向量对应的下标集合。

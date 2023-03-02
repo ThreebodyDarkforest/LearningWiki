@@ -20,7 +20,7 @@ https://www.zhihu.com/question/332144499/answer/731866608)和[维基百科](http
 前文提到了输入空间到希尔伯特空间的非线性变换 $\phi(\pmb x)$，但是 $\phi(\pmb x)$ 往往是难以得出的。不过，通过一些泛函分析手段，我们会发现在 $\mathcal H$ 上的内积容易求出，即 $\phi(\pmb x)\cdot \phi(\pmb z), x,z\in \mathcal{H}$。通过观察 SVM 的分类超平面（在间隔最大化的求解过程中定义）
 
 $$
-\pmb\omega\pmb x + b = \sum_{i = 1}^n\alpha_i^*y_i(\pmb x_i\cdot\pmb x) + b = 0
+\pmb\omega\pmb x + b = \sum_{i = 1}^n\alpha_iy_i(\pmb x_i\cdot\pmb x) + b = 0
 $$
 
 和 SVM 面对的凸优化问题
@@ -58,7 +58,13 @@ $$
 分类超平面变为
 
 $$
-\sum_{i = 1}^n\alpha_i^*y_iK(\pmb x_i, \pmb x) + b = 0
+\sum_{i = 1}^n\alpha_i^*y_iK(\pmb x_i, \pmb x) + b^* = 0
 $$
 
-这相当于在特征空间 $H$ 中隐式地（不必知道 $\phi(\pmb x)$ 的具体表达式）学习一个非线性模型，在 $\mathcal H$ 中应用 SVM 学得的线性模型实际上对应于输入空间中的一个非线性模型。
+其中
+
+$$
+b^* = y_i - \sum_{i = 1}^n\alpha_i^*y_iK(\pmb x_i,\pmb x_j)
+$$
+
+这相当于在特征空间 $\mathcal{H}$ 中隐式地（不必知道 $\phi(\pmb x)$ 的具体表达式）学习一个非线性模型，在 $\mathcal H$ 中应用 SVM 学得的线性模型实际上对应于输入空间中的一个非线性模型。
