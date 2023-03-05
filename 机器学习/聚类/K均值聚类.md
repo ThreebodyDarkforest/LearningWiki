@@ -56,7 +56,7 @@ $$
 ### 相关系数
 
 $$
-r_{ij} = \dfrac{\sum_{k = 1}^m(\pmb x_{ki} - \overline{\pmb x}_i)(\pmb {x}_{kj} - \overline{\pmb x}_{j})}{\left[\sum_{k = 1}^m(\pmb x_{ki} - \overline{\pmb x_i})^2\sum_{k = 1}^m(\pmb x_{kj} - \overline{\pmb x}_{j})\right]^{\frac{1}{2}}}
+r_{ij} = \dfrac{\sum_{k = 1}^m(\pmb x_{ki} - \overline{\pmb x}_i)(\pmb {x}_{kj} - \overline{\pmb x}_{j})}{\left[\sum_{k = 1}^m(\pmb x_{ki} - \overline{\pmb x_i})^2\sum_{k = 1}^m(\pmb x_{kj} - \overline{\pmb x}_{j})^2\right]^{\frac{1}{2}}}
 $$
 
 > 注
