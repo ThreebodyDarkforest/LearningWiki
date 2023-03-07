@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "163638a9d6ba2e15",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "计算机网络/计算机网络基础/网络结构.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "计算机网络/计算机网络基础/网络结构.md",
+            "file": "计算机网络/计算机网络基础/数据传输模式.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -110,7 +97,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "计算机网络/计算机网络基础/网络结构.md"
+            "file": "计算机网络/计算机网络基础/数据传输模式.md"
           }
         }
       },
@@ -120,7 +107,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "计算机网络/计算机网络基础/网络结构.md",
+            "file": "计算机网络/计算机网络基础/数据传输模式.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -144,10 +131,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "163638a9d6ba2e15",
+  "active": "c005a0219aa914d8",
   "lastOpenFiles": [
-    "计算机网络/计算机网络基础/数据传输模式.md",
     "计算机网络/计算机网络基础/网络结构.md",
+    "计算机网络/计算机网络基础/数据传输模式.md",
     "机器学习/EM算法/基本EM算法.md",
     "机器学习/神经网络/梯度消失和梯度爆炸.md",
     "机器学习/神经网络/神经网络正则化.md",
