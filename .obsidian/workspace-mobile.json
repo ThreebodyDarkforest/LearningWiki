@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机网络/计算机网络基础/网络结构.md",
+                "file": "计算机网络/计算机网络基础/数据传输模式.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "计算机网络/计算机网络基础/网络结构.md",
+            "file": "计算机网络/计算机网络基础/数据传输模式.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "计算机网络/计算机网络基础/网络结构.md",
+            "file": "计算机网络/计算机网络基础/数据传输模式.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +114,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "计算机网络/计算机网络基础/网络结构.md"
+            "file": "计算机网络/计算机网络基础/数据传输模式.md"
           }
         }
       },
@@ -141,10 +141,10 @@
   },
   "active": "c73e80e4935e83ff",
   "lastOpenFiles": [
+    "计算机网络/计算机网络基础/网络结构.md",
+    "计算机网络/计算机网络基础/数据传输模式.md",
     "机器人学",
     "自动控制原理/系统数学模型/传递函数.md",
-    "计算机网络/计算机网络基础/数据传输模式.md",
-    "计算机网络/计算机网络基础/网络结构.md",
     "高等数学（下）/第十章/docsify.min.js",
     "高等数学（下）/第十章/正项级数收敛判别法.md",
     "高等数学（下）/第十章/vue.css",
@@ -179,7 +179,6 @@
     "电工电子技术基础/第六章/_image/2022-05-24/Ftw0iJvpFDpwHOUZGJEESuIbjmiA.png",
     "理论力学/build.py",
     "高等数学（下）/第九章/docsify.min.js",
-    "高等数学（下）/vue.css",
     "高等数学（下）/第七章/_image/2022-03-19/IMG_20220316_103028.jpg",
     "电工电子技术基础/第六章/_image/2022-05-24/FgJFvNaBabSlZchzZQcw45qct9wH.png",
     "_cover.png"
