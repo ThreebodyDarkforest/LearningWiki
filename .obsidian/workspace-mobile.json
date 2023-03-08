@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "598a9aaad67f70ad",
+    "id": "6a25d416d4324548",
     "type": "split",
     "children": [
       {
-        "id": "c569b88901243fa6",
+        "id": "3d25319fe3a0618c",
         "type": "tabs",
         "children": [
           {
-            "id": "defdf75c4a3965af",
+            "id": "c73e80e4935e83ff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "计算机网络/计算机网络基础/数据传输模式.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,11 +21,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "0c286711c778bd7c",
+    "id": "f364fb5c7b5c85fe",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "c005a0219aa914d8",
+        "id": "2df5a94cdc1b64cc",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -39,7 +35,7 @@
         }
       },
       {
-        "id": "74da33e05dd2dac7",
+        "id": "8d15e186997a3878",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -54,7 +50,7 @@
         }
       },
       {
-        "id": "2f06c01d007db216",
+        "id": "1afd1b369a554630",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -65,7 +61,7 @@
         }
       },
       {
-        "id": "8e92d6a8cac4f3e9",
+        "id": "50c0fde26555edcb",
         "type": "leaf",
         "state": {
           "type": "starred",
@@ -76,38 +72,15 @@
     "currentTab": 0
   },
   "right": {
-    "id": "85c582523d87b511",
+    "id": "71b5b03db3536037",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "629681fab1e6eac2",
-        "type": "leaf",
-        "state": {
-          "type": "outgoing-link",
-          "state": {
-            "file": "计算机网络/计算机网络基础/数据传输模式.md",
-            "linksCollapsed": false,
-            "unlinkedCollapsed": true
-          }
-        }
-      },
-      {
-        "id": "f283b62bb752b8ff",
-        "type": "leaf",
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "计算机网络/计算机网络基础/数据传输模式.md"
-          }
-        }
-      },
-      {
-        "id": "09a0dfbade0e5bfa",
+        "id": "7335c1b134f5510c",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "计算机网络/计算机网络基础/数据传输模式.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -116,6 +89,25 @@
             "backlinkCollapsed": false,
             "unlinkedCollapsed": true
           }
+        }
+      },
+      {
+        "id": "b772184a3f761387",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "643ff907e3963275",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {}
         }
       }
     ],
@@ -131,48 +123,49 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c005a0219aa914d8",
+  "active": "c73e80e4935e83ff",
   "lastOpenFiles": [
-    "计算机网络/计算机网络基础/网络结构.md",
-    "计算机网络/计算机网络基础/数据传输模式.md",
-    "机器学习/EM算法/基本EM算法.md",
-    "机器学习/神经网络/梯度消失和梯度爆炸.md",
-    "机器学习/神经网络/神经网络正则化.md",
-    "机器学习/入门/线性模型.md",
-    "机器学习/支持向量机/SMO算法.md",
-    "机器学习/支持向量机/软间隔最大化.md",
-    "机器学习/支持向量机/硬间隔最大化.md",
-    "机器学习/支持向量机/核方法与非线性SVM.md",
-    "机器学习/支持向量机/SVM及其数学基础.md",
-    "机器学习/降维/主成分分析.md",
-    "机器学习/聚类/K均值聚类.md",
-    "机器学习/EM算法",
-    "机器学习/_sidebar.md",
-    "机器学习/决策树",
-    "机器学习/神经网络",
-    "机器学习/README.md",
-    "机器学习/入门",
-    "机器学习/docsify.min.js",
-    "机器学习/支持向量机",
-    "机器学习/降维",
-    "机器学习/模型评估",
-    "机器学习/vue.css",
-    "机器学习/聚类",
-    "机器学习/决策树/决策树剪枝.md",
-    "机器学习/模型评估/模型评估与选择.md",
-    "机器学习/集成学习/集成学习.md",
-    "机器学习/集成学习/Bagging和随机森林.md",
-    "机器学习/集成学习/AdaBoost.md",
-    "机器学习/聚类/高斯混合聚类.md",
-    "机器学习/神经网络/感知机与全连接网络.md",
-    "机器学习/入门/机器学习的基本知识.md",
-    "机器学习/决策树/决策树.md",
-    "机器学习/降维/K近邻.md",
-    "_cover.png",
+    "高等数学（下）/第十章/docsify.min.js",
+    "高等数学（下）/第十章/正项级数收敛判别法.md",
+    "高等数学（下）/第十章/vue.css",
+    "高等数学（下）/第十章/数项级数.md",
+    "高等数学（下）/第十章/函数项级数.md",
+    "高等数学（下）/第十章/任意项级数.md",
+    "高等数学（下）/第十章/泰勒级数.md",
+    "高等数学（下）/第十章/幂级数.md",
+    "概率论与数理统计/第四章/中心矩与原点矩.md",
+    "电工电子技术基础/第三章/谐振电路.md",
+    "电工电子技术基础/第七章/基本运算电路.md",
+    "电工电子技术基础/第三章/正弦交流电功率.md",
+    "高等数学（下）/第八章/高斯公式和斯托克斯公式.md",
+    "电工电子技术基础/_sidebar.md",
+    "离散数学/第二章/组合学基础.md",
+    "概率论与数理统计/第四章/协方差.md",
+    "理论力学/docsify.min.js",
+    "电工电子技术基础/docsify.min.js",
+    "高等数学（下）/第八章/第二型曲线积分.md",
+    "高等数学（下）/第九章/高阶线性微分方程.md",
     "高等数学（下）/第六章/_image/2022-02-27/2022-02-27 09.12.00.jpg",
+    "理论力学/第三章/空间力矩和力偶.md",
+    "离散数学/组合计数进阶/Sitiring.md",
+    "电工电子技术基础/第六章/差动放大电路.md",
+    "计算机网络/_sidebar.md",
+    "离散数学/第一章/欧拉函数.md",
+    "_sidebar.md",
+    "理论力学/第四章/摩擦自锁.md",
+    "高等数学（下）/第九章/常微分方程概念.md",
+    "高等数学（下）/第九章/二阶线性常系数微分方程.md",
+    "高等数学（下）/docsify.min.js",
+    "电工电子技术基础/第六章/_image/2022-05-24/FiR-3HPtglzVy1ZxRjJsXFqV_huV.png",
+    "电工电子技术基础/vue.css",
+    "高等数学（下）/第七章/docsify.min.js",
+    "电工电子技术基础/第六章/_image/2022-05-24/Ftw0iJvpFDpwHOUZGJEESuIbjmiA.png",
+    "理论力学/build.py",
+    "高等数学（下）/第九章/docsify.min.js",
+    "高等数学（下）/vue.css",
+    "离散数学/vue.css",
     "高等数学（下）/第七章/_image/2022-03-19/IMG_20220316_103028.jpg",
     "电工电子技术基础/第六章/_image/2022-05-24/FgJFvNaBabSlZchzZQcw45qct9wH.png",
-    "电工电子技术基础/第六章/_image/2022-05-24/Ftw0iJvpFDpwHOUZGJEESuIbjmiA.png",
-    "电工电子技术基础/第六章/_image/2022-05-24/FiR-3HPtglzVy1ZxRjJsXFqV_huV.png"
+    "_cover.png"
   ]
 }
