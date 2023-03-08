@@ -11,8 +11,12 @@
             "id": "c73e80e4935e83ff",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "计算机网络/计算机网络基础/网络结构.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "计算机网络/计算机网络基础/网络结构.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "计算机网络/计算机网络基础/网络结构.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -107,11 +113,21 @@
         "type": "leaf",
         "state": {
           "type": "outline",
+          "state": {
+            "file": "计算机网络/计算机网络基础/网络结构.md"
+          }
+        }
+      },
+      {
+        "id": "f28376060f17952f",
+        "type": "leaf",
+        "state": {
+          "type": "git-view",
           "state": {}
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 3
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -125,6 +141,8 @@
   },
   "active": "c73e80e4935e83ff",
   "lastOpenFiles": [
+    "计算机网络/计算机网络基础/数据传输模式.md",
+    "计算机网络/计算机网络基础/网络结构.md",
     "高等数学（下）/第十章/docsify.min.js",
     "高等数学（下）/第十章/正项级数收敛判别法.md",
     "高等数学（下）/第十章/vue.css",
@@ -154,7 +172,6 @@
     "_sidebar.md",
     "理论力学/第四章/摩擦自锁.md",
     "高等数学（下）/第九章/常微分方程概念.md",
-    "高等数学（下）/第九章/二阶线性常系数微分方程.md",
     "高等数学（下）/docsify.min.js",
     "电工电子技术基础/第六章/_image/2022-05-24/FiR-3HPtglzVy1ZxRjJsXFqV_huV.png",
     "电工电子技术基础/vue.css",
@@ -163,7 +180,6 @@
     "理论力学/build.py",
     "高等数学（下）/第九章/docsify.min.js",
     "高等数学（下）/vue.css",
-    "离散数学/vue.css",
     "高等数学（下）/第七章/_image/2022-03-19/IMG_20220316_103028.jpg",
     "电工电子技术基础/第六章/_image/2022-05-24/FgJFvNaBabSlZchzZQcw45qct9wH.png",
     "_cover.png"
