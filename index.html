@@ -117,6 +117,17 @@
               MathJax.Hub.Queue(["Typeset", MathJax.Hub])
             }
           })
+        },
+        function (hook, vm) {
+          hook.beforeEach(
+            function (mdstr) {
+              const editUrl = 'https://github.com/ThreebodyDarkforest/LearningWiki/tree/main/' + vm.route.file;
+              const prefix = document.location.pathname.endsWith('/') ? '' : '..';
+              const markmapUrl = new URL(prefix + 'markmap.html', document.location);
+              const markdownUrl = new URL(prefix + vm.route.file, document.location);
+              return `[  EDIT DOCUMENT](${editUrl})\t[ MARKMAP](${markmapUrl}?md=${markdownUrl})\n` + mdstr;
+            }
+          );
         }
       ],
       search: {
