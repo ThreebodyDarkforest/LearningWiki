@@ -32,9 +32,9 @@
         const renderMap = function (str, prefix) {
             const dst = document.getElementById("MarkMap");
             dst.innerHTML = str;
-            if (prefix) {
-                dst.innerHTML = str.replace(/\]\(/g, "](" + prefix);
-            }
+            //if (prefix) {
+            //    dst.innerHTML = str.replace(/\]\(/g, "](" + prefix);
+            //}
             markmap.autoLoader.renderAll();
         };
 
