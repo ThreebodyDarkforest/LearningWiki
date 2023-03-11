@@ -1,7 +1,7 @@
 {
-  "api_key": "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",
+  "api_key": "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",
   "engine": "gpt-3.5-turbo",
-  "max_tokens": 1024,
+  "max_tokens": 4096,
   "temperature": 0.7,
   "frequency_penalty": 0.5,
   "prompt": "",

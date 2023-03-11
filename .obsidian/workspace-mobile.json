@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "3d25319fe3a0618c",
+        "id": "357fa8f496ab4b33",
         "type": "tabs",
         "children": [
           {
-            "id": "c73e80e4935e83ff",
+            "id": "b7669d4f5d34b586",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机网络/计算机网络基础/数据传输模式.md",
+                "file": "图像处理/图像基本概念/像素.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bf87cbd69b5cff43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "机器人学/刚体位姿描述与空间变换.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "计算机网络/计算机网络基础/数据传输模式.md",
+            "file": "机器人学/刚体位姿描述与空间变换.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "计算机网络/计算机网络基础/数据传输模式.md",
+            "file": "机器人学/刚体位姿描述与空间变换.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +127,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "计算机网络/计算机网络基础/数据传输模式.md"
+            "file": "机器人学/刚体位姿描述与空间变换.md"
           }
         }
       },
@@ -136,49 +149,52 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "c73e80e4935e83ff",
+  "active": "bf87cbd69b5cff43",
   "lastOpenFiles": [
+    "机器人学/绪论.md",
+    "机器人学/刚体位姿描述与空间变换.md",
+    "机器人学/刚体位姿描述与空间变换",
+    "图像处理/图像基本概念/像素.md",
+    "图像处理/图像基本概念/成像及其变换.md",
+    "图像处理/图像增强/空域图像增强.md",
+    "图像处理/图像增强",
+    "数据库原理/关系结构/SQL.md",
+    "数据库原理/数据库/基本概念.md",
+    "数据库原理/关系结构/关系模型.md",
+    "数字逻辑设计/数制和码制/数码和编码.md",
+    "数字逻辑设计/逻辑代数/基本定理和逻辑函数.md",
     "计算机网络/计算机网络基础/网络结构.md",
+    "计算机网络/应用层/应用层协议.md",
     "计算机网络/计算机网络基础/数据传输模式.md",
-    "机器人学",
+    "自动控制原理/系统数学模型/微分方程.md",
     "自动控制原理/系统数学模型/传递函数.md",
-    "高等数学（下）/第十章/docsify.min.js",
-    "高等数学（下）/第十章/正项级数收敛判别法.md",
-    "高等数学（下）/第十章/vue.css",
-    "高等数学（下）/第十章/数项级数.md",
-    "高等数学（下）/第十章/函数项级数.md",
-    "高等数学（下）/第十章/任意项级数.md",
-    "高等数学（下）/第十章/泰勒级数.md",
-    "高等数学（下）/第十章/幂级数.md",
-    "概率论与数理统计/第四章/中心矩与原点矩.md",
-    "电工电子技术基础/第三章/谐振电路.md",
-    "电工电子技术基础/第七章/基本运算电路.md",
-    "电工电子技术基础/第三章/正弦交流电功率.md",
-    "高等数学（下）/第八章/高斯公式和斯托克斯公式.md",
-    "电工电子技术基础/_sidebar.md",
-    "离散数学/第二章/组合学基础.md",
-    "概率论与数理统计/第四章/协方差.md",
-    "理论力学/docsify.min.js",
-    "电工电子技术基础/docsify.min.js",
-    "高等数学（下）/第八章/第二型曲线积分.md",
-    "高等数学（下）/第九章/高阶线性微分方程.md",
+    "自动控制原理/系统数学模型/系统结构图.md",
+    "大学物理/第三章/角动量和角动量定理.md",
+    "大学物理/第五章/角动量守恒.md",
+    "大学物理/第五章/转动过程功能原理.md",
+    "自动控制原理/基本概念/基本概念.md",
+    "电工电子技术基础/第二章/RL电路暂态分析.md",
+    "/电工电子技术基础/第二章/RL电路暂态分析.md",
+    "/电工电子技术基础/_sidebar.md",
+    "数字逻辑设计/进制/进制转换.md",
+    "数据库原理/_sidebar.md",
+    "数据库原理/build.py",
+    "图像处理/build.py",
+    "自动控制原理/_sidebar.md",
+    "favicon.ico",
+    "自动控制原理/build.py",
+    "/自动控制原理/build.py",
+    "/数据库原理/build.py",
+    "/图像处理/build.py",
+    "/markmap.html",
     "高等数学（下）/第六章/_image/2022-02-27/2022-02-27 09.12.00.jpg",
-    "理论力学/第三章/空间力矩和力偶.md",
-    "离散数学/组合计数进阶/Sitiring.md",
-    "电工电子技术基础/第六章/差动放大电路.md",
-    "计算机网络/_sidebar.md",
-    "离散数学/第一章/欧拉函数.md",
-    "_sidebar.md",
-    "高等数学（下）/docsify.min.js",
     "电工电子技术基础/第六章/_image/2022-05-24/FiR-3HPtglzVy1ZxRjJsXFqV_huV.png",
-    "电工电子技术基础/vue.css",
-    "高等数学（下）/第七章/docsify.min.js",
     "电工电子技术基础/第六章/_image/2022-05-24/Ftw0iJvpFDpwHOUZGJEESuIbjmiA.png",
-    "理论力学/build.py",
-    "高等数学（下）/第九章/docsify.min.js",
     "高等数学（下）/第七章/_image/2022-03-19/IMG_20220316_103028.jpg",
     "电工电子技术基础/第六章/_image/2022-05-24/FgJFvNaBabSlZchzZQcw45qct9wH.png",
     "_cover.png"
