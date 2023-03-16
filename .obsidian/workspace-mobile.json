@@ -11,9 +11,19 @@
             "id": "b7669d4f5d34b586",
             "type": "leaf",
             "state": {
+              "type": "mindmapview",
+              "state": {
+                "file": "机器人学/刚体的一般运动.md"
+              }
+            }
+          },
+          {
+            "id": "42e82a62abb60b76",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "图像处理/图像基本概念/像素.md",
+                "file": "自动控制原理/系统数学模型/系统结构图.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,11 +33,9 @@
             "id": "bf87cbd69b5cff43",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mindmapview",
               "state": {
-                "file": "机器人学/刚体位姿描述与空间变换.md",
-                "mode": "source",
-                "source": false
+                "file": "机器人学/刚体位姿描述与空间变换.md"
               }
             }
           }
@@ -98,7 +106,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "机器人学/刚体位姿描述与空间变换.md",
+            "file": "自动控制原理/系统数学模型/系统结构图.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -115,7 +123,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "机器人学/刚体位姿描述与空间变换.md",
+            "file": "自动控制原理/系统数学模型/系统结构图.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -127,7 +135,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "机器人学/刚体位姿描述与空间变换.md"
+            "file": "自动控制原理/系统数学模型/系统结构图.md"
           }
         }
       },
@@ -154,26 +162,28 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "bf87cbd69b5cff43",
+  "active": "42e82a62abb60b76",
   "lastOpenFiles": [
-    "机器人学/绪论.md",
-    "机器人学/刚体位姿描述与空间变换.md",
-    "机器人学/刚体位姿描述与空间变换",
+    "数字逻辑设计/逻辑代数/基本定理和逻辑函数.md",
+    "图像处理/图像增强/空域图像增强.md",
     "图像处理/图像基本概念/像素.md",
     "图像处理/图像基本概念/成像及其变换.md",
-    "图像处理/图像增强/空域图像增强.md",
+    "计算机网络/应用层/应用层协议.md",
+    "计算机网络/计算机网络基础/网络结构.md",
+    "计算机网络/计算机网络基础/数据传输模式.md",
+    "机器人学/机器人运动链.md",
+    "机器人学/刚体的一般运动.md",
+    "自动控制原理/系统数学模型/系统结构图.md",
+    "机器人学/刚体位姿描述与空间变换.md",
+    "机器人学/绪论.md",
+    "机器人学/刚体位姿描述与空间变换",
     "图像处理/图像增强",
     "数据库原理/关系结构/SQL.md",
     "数据库原理/数据库/基本概念.md",
     "数据库原理/关系结构/关系模型.md",
     "数字逻辑设计/数制和码制/数码和编码.md",
-    "数字逻辑设计/逻辑代数/基本定理和逻辑函数.md",
-    "计算机网络/计算机网络基础/网络结构.md",
-    "计算机网络/应用层/应用层协议.md",
-    "计算机网络/计算机网络基础/数据传输模式.md",
     "自动控制原理/系统数学模型/微分方程.md",
     "自动控制原理/系统数学模型/传递函数.md",
-    "自动控制原理/系统数学模型/系统结构图.md",
     "大学物理/第三章/角动量和角动量定理.md",
     "大学物理/第五章/角动量守恒.md",
     "大学物理/第五章/转动过程功能原理.md",
@@ -182,10 +192,8 @@
     "/电工电子技术基础/第二章/RL电路暂态分析.md",
     "/电工电子技术基础/_sidebar.md",
     "数字逻辑设计/进制/进制转换.md",
-    "数据库原理/_sidebar.md",
     "数据库原理/build.py",
     "图像处理/build.py",
-    "自动控制原理/_sidebar.md",
     "favicon.ico",
     "自动控制原理/build.py",
     "/自动控制原理/build.py",
