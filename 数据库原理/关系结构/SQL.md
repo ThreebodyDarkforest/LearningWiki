@@ -50,3 +50,45 @@ mindmap-plugin: basic
 		- 允许函数
 	- 字符串操作
 		- `%` 匹配子串，`_` 匹配字符
+		- 匹配方法：`where {attribute} (not) like '{pattern}'`
+		- 连接
+		- 大小写转换
+		- 字符串长
+		- 子串提取
+	- 排序：`order by {attribute} (desc/asc)`
+	- 范围取值：`where {attribute} between {value} and {value}`
+	- 元组比较：逐一相等
+	- 集合
+		- 交集：`select ... except select ...`
+		- 并集：`union`
+	- 空值
+		- 算数表达式含空值，结果等于空
+		- 比较表达式含空，结果为 `unknown`
+		- 元组含空，结果为 `identical`
+		- 逻辑运算
+			- `unknown` 可视为 `0.5` 或逻辑变量进行逻辑运算
+			- 空值在查询过程中被视为 `false`
+	- 聚合函数
+		- `avg, min, max, sum, count` 只作用于单列
+		- 分组（可作用于多列）
+			- `group by`，聚合后不允许 `select` 非聚合列
+			- 筛选：`having` 类似非聚合的 `where`，但是对筛选组
+			- 计算顺序：`from->where->group by->having->select`
+		- 空值
+			- 除了 `count` 其它聚合函数都忽略空值，包括单列和元组（若全空值则结果为空值）
+	- 嵌套查询
+		- 可以在 `where` 后面做嵌套，也可以在 `from` 后做嵌套，还可以在 `select` 后做
+		- 交：`{sql} (not) in {sql/enum}`，`enum like ('A', 'B')`
+		- 比较（变量与集合比较）
+			- `some` ：至少比一个大/大于某些 `{sql} > some({sql})`
+			- `all`：比所有的都大 `{sql} > all({sql})`
+		- 空集判断：`... where (not) exist {sql}` 等价于双重循环判重
+			- `.. where not exist ({sqlA} except {sqlB}`) `sqlA` 对应集合 中不包含 `sqlB` 集合的部分
+		- 只出现一次：`... where unique {sql}` 在 `{sql}` 中只出现一次
+		- 临时视图：`with` 创建一个临时视图（写在 sql 语句开头）供 sql 使用
+		- 标量查询：`select` 嵌套，**嵌套语句只能返回标量（非集合）**
+- SQL 更新语句
+	- 删除：`delete from r where P`
+	- 插入：`insert into r values(tuple)` values 可以是一个 tuple（如 `values('male', 24)`），也可以是 sql 查询语句返回的集合
+	- 更新：`update r set A = where P`
+		- `case when P1 then res1 ... end` 多条件结果更新
